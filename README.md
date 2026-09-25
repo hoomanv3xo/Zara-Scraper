@@ -10,7 +10,6 @@ Zara's product grid is rendered with JavaScript, and the page is protected again
 2. Instead of relying on fragile CSS selectors (which Zara changes periodically), it locates the embedded `window.zara.viewPayload` JSON blob in a `<script>` tag on the page. This is the same data Zara's frontend uses to hydrate the page, and it contains clean, structured info for every product — name, price, and full-resolution image URLs — regardless of whether that product has scrolled into view yet.
 3. Parses that JSON to build a list of products, then exports the results.
 
-This approach is more resilient than scraping rendered HTML: even if Zara changes class names or page layout, the underlying JSON structure tends to stay stable for much longer.
 
 ## Requirements
 
